@@ -8,6 +8,12 @@ public class Person {
 
     private String name = "Lucy";
 
+    @Autowired // optional
+    public Person(Vehicle vehicle) {
+        System.out.println("Person bean created by Spring");
+        this.vehicle = vehicle;
+    }
+
     /*
     The @Autowired annotation marks on a field, constructor, Setter method and
     is used to auto-wire the beans - injecting beans (Objects) at runtime by
@@ -29,7 +35,7 @@ public class Person {
         return vehicle;
     }
 
-    @Autowired
+    // @Autowired
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
