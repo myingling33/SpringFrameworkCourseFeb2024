@@ -14,7 +14,7 @@ public class Person {
     Spring Dependency Injection mechanism.
      */
 
-    @Autowired
+    // @Autowired
     private Vehicle vehicle;
 
     public String getName() {
@@ -29,6 +29,7 @@ public class Person {
         return vehicle;
     }
 
+    @Autowired
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
