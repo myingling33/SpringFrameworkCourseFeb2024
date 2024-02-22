@@ -1,5 +1,8 @@
 package com.example.beans;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
 public class Person {
 
     public Person() {
@@ -23,5 +26,19 @@ public class Person {
 
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
+    }
+
+    public static interface Speakers {
+        public String makeSound();
+    }
+
+    @Component
+    @Primary
+    public static class SonySpeakers implements Speakers {
+
+        @Override
+        public String makeSound() {
+            return "Playing music with Sony speakers";
+        }
     }
 }
