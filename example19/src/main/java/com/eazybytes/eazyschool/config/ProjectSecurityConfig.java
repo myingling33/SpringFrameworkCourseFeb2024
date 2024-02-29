@@ -49,11 +49,3 @@ public class ProjectSecurityConfig {
 }
 
 
-//http
-//        .authorizeHttpRequests((authorize) -> authorize
-//        .requestMatchers(HttpMethod.GET).hasAuthority("read")
-//        .requestMatchers(HttpMethod.POST).hasAuthority("write")
-//        .anyRequest().denyAll()
-//        )
-
-
