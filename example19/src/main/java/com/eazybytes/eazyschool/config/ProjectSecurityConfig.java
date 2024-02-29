@@ -32,12 +32,13 @@ public class ProjectSecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.withDefaultPasswordEncoder()
+        // withDefaultPasswordEncoder()
+        UserDetails user = User.builder()
                 .username("user")
                 .password("12345")
                 .roles("USER")
                 .build();
-        UserDetails admin = User.withDefaultPasswordEncoder()
+        UserDetails admin = User.builder()
                 .username("admin")
                 .password("54321")
                 .roles("USER", "ADMIN")
